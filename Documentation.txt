@@ -18,7 +18,7 @@ Docker: Install Docker
 Deployment Steps
 Clone the project from the GitHub repository:
 
-git clone github.com/Jagan-45/Item-Management-application.git
+git clone https://github.com/Jagan-45/Item-Management-application.git
 cd Item-Management-application
 
 
