@@ -1,0 +1,59 @@
+Item Management Application Documentation:
+
+Overview:
+
+The Item Management Application is a simple Java backend application that implements a RESTful API for managing a collection of items. It provides endpoints to add new items and retrieve items by their ID. The application stores data in-memory using an ArrayList.
+
+Technologies Used:
+Frontend:html,css,js 
+Java Spring Boot: The application is built using the Spring Boot framework, which simplifies the development of Java applications.
+Maven: Maven is used for project management and dependency resolution.
+Docker: Docker is used for containerization, allowing for easy deployment and distribution of the application.
+Git: Git is used for version control and source code management.
+Installation and Deployment
+Prerequisites
+Before deploying the application, ensure you have the following prerequisites installed:
+
+Docker: Install Docker
+Deployment Steps
+Clone the project from the GitHub repository:
+
+git clone github.com/Jagan-45/Item-Management-application.git
+cd Item-Management-application
+
+
+Build the Docker image:
+
+docker build -t items .
+Run the Docker container:
+docker run -p 8080:8080 items
+The application should now be running on http://localhost:8080.
+
+API Endpoints
+Add a New Item
+Endpoint: POST /api/items
+
+Description: Add a new item to the collection.
+
+Request Body: JSON object containing the item data (id, name, description, etc.).
+
+Example Request: curl -X POST -H "Content-Type: application/json" -d '{"name":"Item 1","description":"This is item 1"}' http://localhost:8080/api/items
+Response: The newly created item with a unique ID.
+
+Get a Single Item by ID
+Endpoint: GET /api/items/{id}
+
+Description: Retrieve a single item by its ID.
+
+Path Parameter: id - The unique ID of the item.
+
+Example Request: curl http://localhost:8080/api/items/1
+Response: The item with the specified ID.
+
+Get All Items
+Endpoint: GET /api/items
+
+Description: Retrieve all items in the collection.
+
+Example Request: curl http://localhost:8080/api/items
+Response: An array of all items in the collection.

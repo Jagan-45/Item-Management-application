@@ -1,0 +1,37 @@
+<!-- src/main/resources/static/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Item Management</h1>
+
+    <!-- Form to add a new item -->
+    <form id="addItemForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <br>
+        <label for="description">Description:</label>
+        <input type="text" id="description" required>
+        <br>
+        <button type="submit">Add Item</button>
+    </form>
+
+    <!-- Buttons to fetch items -->
+    <button id="getAllItems">Get All Items</button>
+    <br>
+    <label for="itemId">Item ID:</label>
+    <input type="text" id="itemId" required>
+    <button id="getItemById">Get Item by ID</button>
+
+    <!-- Display items -->
+    <h2>Items:</h2>
+    <ul id="itemList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
